@@ -2,11 +2,14 @@
 let data = [`剪刀`,`石頭`,`布`]
 let aResult 
 let bResult 
-let a = aResult
-let b = bResult
+let a
+let b 
+
+console.log(aResult, bResult);
 
 // DOM
-const refresh = document.querySelector(`.refresh`)
+const showResult = document.querySelector(`.showResult`)
+const refreshBtn = document.querySelector(`.refreshBtn`)
 const a_Answer = document.querySelector(`.a_answer`)
 const b_Answer = document.querySelector(`.b_answer`)
 const resultShowTxt = document.querySelector(`.resultShowTxt`)
@@ -35,7 +38,7 @@ function mora() {
     }
   }
 }
-//取陣列值用函式
+//取陣列值+渲染畫面用函式
 function randomResult() {
   aResult = data[Math.floor(Math.random()*3)]
   bResult = data[Math.floor(Math.random()*3)]
@@ -44,10 +47,19 @@ function randomResult() {
   a_Answer.textContent = `A出${a}`
   b_Answer.textContent = `B出${b}`
 }
-// 導出結果用函式
-refresh.addEventListener(`click`, function () {
+// 重新整理用函式
+function refresh() {
+  window.location.reload();
+}
+// 導出結果用監聽按鈕
+showResult.addEventListener(`click`, function () {
   randomResult()
   mora()
+})
+
+// 重新整理用監聽按鈕
+refreshBtn.addEventListener(`click` , function () {
+  refresh()
 })
 
 

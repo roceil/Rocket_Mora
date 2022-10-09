@@ -5,35 +5,34 @@
 .wrap {
   display: flex;
   position: relative;
-  .resultShow{
+  .resultShow {
     position: absolute;
     bottom: 20%;
     left: 50%;
     width: auto;
     height: auto;
     transform: translate(-50%, 0);
-    background-color:cadetblue;
+    background-color: cadetblue;
     border-radius: 24px;
     padding: 0 16px;
-    h2{
+    h2 {
       margin: 0;
     }
-
   }
-  .div2{
+  .div2 {
     background-color: aquamarine;
   }
   div {
     width: 50%;
     height: 300px;
     text-align: center;
-    background-color:beige;
+    background-color: beige;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-.refresh {
+.showResult {
   display: flex;
   justify-content: center;
   width: 200px;
@@ -42,5 +41,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 24px;
+  margin-bottom: 12px;
+}
 
+.refreshBtn {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
 }
